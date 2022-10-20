@@ -1,0 +1,32 @@
+<html>
+  <head>
+  </head>
+  <body class="p-3 mb-2 bg-dark text-white">
+
+    <h1  class="display-4" align="center">
+      {{messg}}
+    </h1><br><br>
+
+    <table class="table table-hover table-dark">
+      <thead>
+          <tr>
+          <th scope="col">Course Id</th>
+          <th scope="col">Course Name</th>
+          <th scope="col">Author Name</th>
+          <th scope="col">Duration</th>
+          <th scope="col"></th>
+      </tr>
+    </thead>
+      <tbody>
+        <!-- for loop -->
+          <tr  *ngFor ="let courses of courses">
+              <td>{{courses.courseId}}</td>
+              <td>{{courses.courseName}}</td>
+              <td>{{courses.authorName}}</td>
+              <td>{{courses.duration}</td>
+              <td><button class="text-black-50 fw-bold" (click)=" goToOrderForm(courses.courseId)" >Subscribe</button></td>
+          </tr>
+      </tbody>
+    </table> 
+  </body>
+</html>

@@ -1,0 +1,39 @@
+ <div class="container" style="width: 750px" style="background-color: rgb(114, 153, 158) ;">
+    <br>
+    <h3 style="color: white ;">Add Courses Form</h3><br>
+
+    <form [formGroup]="addCoursesForm">
+        <div class="form-row">
+            <div class="form-group col-md-1">
+                <label for="orderNo">Course Id: </label><br>
+                <input type="text" class="form-control" formControlName = "orderNo" ><br>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="courseName">Course Name: </label><br>
+                <input type="text" class="form-control" formControlName = "courseName" [(ngModel)]="course.courseId"><br>
+            </div>
+
+            <div class="form-group col-md-2">
+                <label for="authorName">Author Name: </label><br>
+                <input type="text" class="form-control" formControlName = "authorName" [(ngModel)]="course.authorName"><br>
+            </div>
+
+            <div class="form-group col-md-1">
+                <label for="duration"> Duration: </label><br>
+                <input type="text" class="form-control" formControlName = "duration" [(ngModel)]="course.duration"><br>
+            </div>
+
+        </div>
+    </form>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="reset" class="btn btn-light" style="float: left;">Clear</button>
+    
+    <button (click)="saveCourse()" class="btn btn-primary btn-lg btn-black" style="float: right;">Add Course</button><br><br><br>
+    <button (click)="deleteCourse()" class="btn btn-primary btn-lg btn-black" style="float: right;">Delete Course</button><br><br>
+ 
+
+</div>
